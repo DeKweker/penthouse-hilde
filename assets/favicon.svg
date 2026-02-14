@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Appartement Hilde">
+  <defs>
+    <linearGradient id="ring" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#d5ba90"/>
+      <stop offset="100%" stop-color="#9f7c4f"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e232a"/>
+      <stop offset="100%" stop-color="#0f1216"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#f2eee6"/>
+  <circle cx="32" cy="32" r="24" fill="url(#core)"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="url(#ring)" stroke-width="2"/>
+  <path d="M22 46V18h6v10h8V18h6v28h-6V34h-8v12h-6z" fill="#f5ecde"/>
+</svg>

@@ -1,0 +1,23 @@
+﻿{
+  "timezone": "Europe/Madrid",
+  "currency": "EUR",
+  "checkin": "16:00",
+  "checkout": "10:00",
+  "min_nights": 4,
+  "pricing_disclaimer": "Indicatieve prijzen per nacht; definitieve offerte na persoonlijke bevestiging.",
+  "pricing_rules": {
+    "cleaning_fee": 95,
+    "security_deposit": 300
+  },
+  "seasons": [
+    { "name": "Laagseizoen", "start": "2026-01-01", "end": "2026-03-31", "nightly_rate": 145 },
+    { "name": "Lenteseizoen", "start": "2026-04-01", "end": "2026-06-30", "nightly_rate": 175 },
+    { "name": "Hoogseizoen", "start": "2026-07-01", "end": "2026-08-31", "nightly_rate": 220 },
+    { "name": "Nazomer", "start": "2026-09-01", "end": "2026-10-31", "nightly_rate": 185 },
+    { "name": "Herfst/Winter", "start": "2026-11-01", "end": "2026-12-31", "nightly_rate": 155 }
+  ],
+  "blocked": [
+    { "start": "2026-03-10", "end": "2026-03-18", "reason": "Bezet" },
+    { "start": "2026-04-02", "end": "2026-04-06", "reason": "Bezet" }
+  ]
+}

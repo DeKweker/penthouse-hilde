@@ -4,20 +4,25 @@
   "checkin": "16:00",
   "checkout": "10:00",
   "min_nights": 4,
-  "pricing_disclaimer": "Indicatieve prijzen per nacht; definitieve offerte na persoonlijke bevestiging.",
+  "pricing_disclaimer": "Indicatieve huurbedragen per nacht. Definitieve bevestiging volgt altijd na persoonlijk contact.",
   "pricing_rules": {
     "cleaning_fee": 95,
     "security_deposit": 300
   },
   "seasons": [
-    { "name": "Laagseizoen", "start": "2026-01-01", "end": "2026-03-31", "nightly_rate": 145 },
-    { "name": "Lenteseizoen", "start": "2026-04-01", "end": "2026-06-30", "nightly_rate": 175 },
-    { "name": "Hoogseizoen", "start": "2026-07-01", "end": "2026-08-31", "nightly_rate": 220 },
-    { "name": "Nazomer", "start": "2026-09-01", "end": "2026-10-31", "nightly_rate": 185 },
-    { "name": "Herfst/Winter", "start": "2026-11-01", "end": "2026-12-31", "nightly_rate": 155 }
+    { "name": "Winter 2026", "start": "2026-01-01", "end": "2026-03-31", "nightly_rate": 165 },
+    { "name": "Voorjaar 2026", "start": "2026-04-01", "end": "2026-06-30", "nightly_rate": 190 },
+    { "name": "Zomer 2026", "start": "2026-07-01", "end": "2026-08-31", "nightly_rate": 255 },
+    { "name": "Najaar 2026", "start": "2026-09-01", "end": "2026-10-31", "nightly_rate": 205 },
+    { "name": "Winterzon 2026-2027", "start": "2026-11-01", "end": "2027-03-31", "nightly_rate": 175 },
+    { "name": "Voorjaar 2027", "start": "2027-04-01", "end": "2027-06-30", "nightly_rate": 195 }
   ],
   "blocked": [
-    { "start": "2026-03-10", "end": "2026-03-18", "reason": "Bezet" },
-    { "start": "2026-04-02", "end": "2026-04-06", "reason": "Bezet" }
+    { "start": "2026-03-18", "end": "2026-03-23", "reason": "Bezet" },
+    { "start": "2026-04-29", "end": "2026-05-04", "reason": "Bezet" },
+    { "start": "2026-07-10", "end": "2026-07-17", "reason": "Bezet" },
+    { "start": "2026-08-08", "end": "2026-08-19", "reason": "Bezet" },
+    { "start": "2026-10-03", "end": "2026-10-10", "reason": "Bezet" },
+    { "start": "2026-12-24", "end": "2027-01-02", "reason": "Bezet" }
   ]
 }

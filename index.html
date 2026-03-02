@@ -3,25 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
 
-  <title>Appartement Hilde | Luxe privé penthouse verhuur in Los Alcazares</title>
-  <meta name="description" content="Luxe privé penthouse verhuur in Los Alcazares. Rechtstreeks contact, 3 slaapkamers, 2 badkamers en groot dakterras nabij La Serena Golf en Mar Menor." />
+  <title>Ático Hilsol | Privé penthouse in Los Alcázares</title>
+  <meta name="description" content="Ático Hilsol is een privé penthouse in Los Alcázares, naast La Serena Golf en dicht bij de Mar Menor. Rechtstreeks contact, heldere afspraken en een rustige premium verblijfservaring." />
   <link rel="canonical" href="https://appartement-hilde.vercel.app/" />
+
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
   <link rel="icon" href="./favicon.ico" sizes="any" />
   <link rel="shortcut icon" href="./favicon.ico" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Appartement Hilde | Luxe privé penthouse verhuur" />
-  <meta property="og:description" content="Exclusief privé penthouse in Los Alcazares met persoonlijke opvolging en heldere afspraken." />
+  <meta property="og:title" content="Ático Hilsol | Privé penthouse in Los Alcázares" />
+  <meta property="og:description" content="Drie slaapkamers, twee badkamers en een ruim dakterras in een rustige residentie naast La Serena Golf." />
   <meta property="og:url" content="https://appartement-hilde.vercel.app/" />
   <meta property="og:image" content="https://appartement-hilde.vercel.app/assets/og-cover.jpg" />
   <meta property="og:locale" content="nl_BE" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Appartement Hilde | Luxe privé penthouse verhuur" />
-  <meta name="twitter:description" content="Exclusief verblijf in alle rust met persoonlijk contact en duidelijke verhuurafspraken." />
+  <meta name="twitter:title" content="Ático Hilsol | Privé penthouse in Los Alcázares" />
+  <meta name="twitter:description" content="Persoonlijke verhuur, duidelijke voorwaarden en een premium verblijf aan de Costa Calida." />
   <meta name="twitter:image" content="https://appartement-hilde.vercel.app/assets/og-cover.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="./css/base.css" />
 
@@ -29,19 +35,20 @@
     {
       "@context": "https://schema.org",
       "@type": "VacationRental",
-      "name": "Appartement Hilde",
-      "description": "Luxe privé penthouse verhuur in Los Alcazares, naast La Serena Golf en dicht bij de Mar Menor.",
+      "name": "Ático Hilsol",
+      "description": "Ático Hilsol is een privé penthouse in Los Alcázares, naast La Serena Golf en dicht bij de Mar Menor.",
       "numberOfBedrooms": 3,
       "numberOfBathroomsTotal": 2,
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Avda. Principe Felipe 30",
         "addressLocality": "Los Alcazares",
         "addressRegion": "Murcia",
         "postalCode": "30710",
         "addressCountry": "ES"
       },
       "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "Dakterras", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Prive dakterras", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Gemeenschappelijke zwembaden", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Ondergrondse parking", "value": true }
       ],
@@ -53,356 +60,292 @@
   <a class="skip-link" href="#main">Ga naar inhoud</a>
 
   <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand-dot" aria-hidden="true"></span>
+    <div class="shell header-shell">
+      <a class="brand" href="#top" aria-label="Home Ático Hilsol">
+        <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
-          <span class="brand-name">Appartement Hilde</span>
-          <span class="brand-sub">Los Alcazares · Costa Calida</span>
+          <strong>Ático Hilsol</strong>
+          <span>Private Penthouse Residence · Los Alcázares</span>
         </span>
       </a>
 
-      <nav class="nav" aria-label="Hoofdnavigatie">
-        <a href="#availability">Beschikbaarheid</a>
-        <a href="#werkwijze">Werkwijze</a>
-        <a href="#tarieven">Tarieven</a>
-        <a href="#appartement">Penthouse</a>
-        <a href="#complex">Complex</a>
-        <a href="#ligging">Ligging</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+      <button class="menu-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navPanel" aria-label="Menu openen">
+        <span></span>
+        <span></span>
+      </button>
 
-      <a class="btn btn-primary" href="#contact">Vraag beschikbaarheid</a>
+      <nav class="main-nav" id="navPanel" aria-label="Hoofdnavigatie">
+        <a href="#availability" data-nav-link>Beschikbaarheid</a>
+        <a href="#tarieven" data-nav-link>Tarieven</a>
+        <a href="#appartement" data-nav-link>Penthouse</a>
+        <a href="#complex" data-nav-link>Complex</a>
+        <a href="#ligging" data-nav-link>Ligging</a>
+        <a href="#faq" data-nav-link>FAQ</a>
+        <a class="nav-cta" href="#contact" data-nav-link>Vraag beschikbaarheid</a>
+      </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="section hero" aria-label="Introductie">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Privé penthouse verhuur</p>
-          <h1>Een rustig penthouse met uitzicht over Los Alcazares</h1>
+    <section class="hero" aria-label="Introductie">
+      <div class="hero-media">
+        <img src="./assets/hero.webp" alt="Privé dakterras met uitzicht op zee en golf in Los Alcazares" loading="eager" />
+      </div>
+
+      <div class="shell hero-content-wrap">
+        <article class="hero-content">
+          <p class="kicker">Privé penthouseverhuur</p>
+          <h1>Een stil, licht penthouse naast La Serena Golf en de Mar Menor</h1>
           <p class="lead">
-            In Velapi Golf verblijf je ruim en comfortabel, vlak bij La Serena Golf en de Mar Menor.
-            Alles verloopt rechtstreeks en persoonlijk, van je eerste bericht tot je aankomst.
+            Je huurt rechtstreeks bij de eigenaar, zonder platformlaag ertussen.
+            Alles loopt persoonlijk: van beschikbaarheid en prijsindicatie tot check-in en verblijfsinformatie.
           </p>
-
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#availability">Bekijk beschikbaarheid</a>
-            <a class="btn btn-secondary" href="#appartement">Bekijk het penthouse</a>
+            <a class="btn btn-primary" href="#availability">Bekijk kalender</a>
+            <a class="btn btn-ghost" href="#appartement">Bekijk penthouse</a>
           </div>
-
-          <ul class="hero-stats" aria-label="Snelle links naar kamers en contact">
-            <li>
-              <a class="hero-stat-link" href="#room-master">
-                <strong>Kamer 1</strong>
-                <span>Master suite</span>
-              </a>
-            </li>
-            <li>
-              <a class="hero-stat-link" href="#room-guest">
-                <strong>Kamer 2</strong>
-                <span>Guest room</span>
-              </a>
-            </li>
-            <li>
-              <a class="hero-stat-link" href="#room-family">
-                <strong>Kamer 3</strong>
-                <span>Family room</span>
-              </a>
-            </li>
-            <li>
-              <a class="hero-stat-link" href="#contact">
-                <strong>Direct</strong>
-                <span>Beschikbaarheid</span>
-              </a>
-            </li>
-          </ul>
-
-          <p class="hero-trustline">Stijlvol, rustig en persoonlijk geregeld, zonder omwegen.</p>
-        </div>
-
-        <div class="hero-media">
-          <img src="./assets/hero.webp" alt="Sfeerbeeld van het penthouse in Los Alcazares" loading="eager" />
-          <p class="hero-caption">Privé penthouse in Los Alcazares · Velapi Golf</p>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section id="werkwijze" class="section process-section" aria-label="Werkwijze">
-      <div class="container">
-        <div class="process-layout">
-          <div class="process-intro">
-            <p class="eyebrow">Werkwijze</p>
-            <h2>Zo boek je in alle rust</h2>
-            <p class="muted intro">Je kiest je data, wij nemen het daarna persoonlijk en duidelijk over.</p>
-          </div>
-
-          <div class="process-grid">
-            <article class="process-card">
-              <h3>1. Kies je data</h3>
-              <p>Je ziet meteen welke dagen vrij zijn en wat een verblijf ongeveer kost.</p>
-            </article>
-            <article class="process-card">
-              <h3>2. Stuur je aanvraag</h3>
-              <p>Met een kort bericht via e-mail of WhatsApp weten we meteen wat je zoekt.</p>
-            </article>
-            <article class="process-card">
-              <h3>3. Bevestiging op maat</h3>
-              <p>Je krijgt snel antwoord met duidelijke afspraken en alle praktische info.</p>
-            </article>
-          </div>
-        </div>
+    <section class="strip" aria-label="Kerninformatie">
+      <div class="shell strip-grid">
+        <a href="#sectie-slaapkamers"><strong>3 slaapkamers</strong><span>volwaardige indeling</span></a>
+        <a href="#sectie-badkamers"><strong>2 badkamers</strong><span>praktisch voor gezinnen</span></a>
+        <a href="#sectie-dakterras"><strong>Prive dakterras</strong><span>zicht op golf en kust</span></a>
+        <a href="#contact"><strong>Direct contact</strong><span>mail of WhatsApp</span></a>
       </div>
     </section>
 
-    <section id="availability" class="section section-alt" aria-label="Beschikbaarheid en aanvraag">
-      <div class="container booking-shell">
-        <div class="booking-headline">
-          <p class="eyebrow">Beschikbaarheid</p>
-          <h2>Kies je data en check direct</h2>
+    <section id="availability" class="section booking-section" aria-label="Beschikbaarheid en aanvraag">
+      <div class="shell booking-layout">
+        <div class="booking-intro">
+          <p class="kicker">Beschikbaarheid</p>
+          <h2>Discreet boeken, met directe prijsindicatie en persoonlijke opvolging</h2>
+          <p class="booking-note">
+            Selecteer data en gasten in een rustige flow. Pas na bevestiging verschijnt de finale stap voor je gegevens en betaling.
+          </p>
         </div>
 
-        <div class="booking-stage">
-          <div class="booking-grid">
-            <article class="panel">
-              <div class="panel-head">
-                <div>
-                  <h2>Kalender</h2>
+        <article class="booking-panel" id="contact">
+          <div class="booking-panel-head">
+            <h2>Selecteer je verblijf</h2>
+            <p id="availabilityHint" class="assistive-message">Kies een vrije aankomstdatum om te starten.</p>
+          </div>
+
+          <form class="request-form" id="rentalForm" novalidate>
+            <div class="booking-bar" aria-live="polite">
+              <p class="booking-segment booking-place">
+                <span>Waar</span>
+                <strong>Ático Hilsol, Los Alcázares</strong>
+              </p>
+              <button class="booking-segment date-trigger" id="arrivalTrigger" type="button" aria-haspopup="dialog" aria-controls="calendarPopover" aria-expanded="false">
+                <span>Wanneer</span>
+                <strong id="selectedPeriod">Datums toevoegen</strong>
+              </button>
+              <button class="booking-segment guest-trigger" id="guestTrigger" type="button" aria-haspopup="dialog" aria-controls="guestPopover" aria-expanded="false">
+                <span>Wie</span>
+                <strong id="selectedGuests">4 gasten</strong>
+              </button>
+              <button class="booking-search" id="startCheckout" type="button">Controleren</button>
+            </div>
+
+            <div class="date-picker-stack">
+              <input id="requestGuests" name="Gasten" type="hidden" value="4" />
+              <button id="departureTrigger" type="button" hidden tabindex="-1" aria-hidden="true">Vertrek</button>
+
+              <div class="guest-popover" id="guestPopover" role="dialog" aria-modal="false" aria-label="Kies aantal gasten" tabindex="-1" hidden>
+                <div class="guest-row">
+                  <div>
+                    <p>Volwassenen</p>
+                    <span>Vanaf 18 jaar</span>
+                  </div>
+                  <div class="guest-stepper">
+                    <button id="guestAdultsMinus" type="button" class="guest-stepper-btn" aria-label="Minder volwassenen">-</button>
+                    <output id="guestAdultsValue" aria-live="polite">2</output>
+                    <button id="guestAdultsPlus" type="button" class="guest-stepper-btn" aria-label="Meer volwassenen">+</button>
+                  </div>
                 </div>
 
-                <div class="cal-nav" aria-label="Kalender navigatie">
-                  <button class="btn btn-tertiary" id="calPrev" type="button" aria-label="Vorige maand">Vorige</button>
-                  <p class="cal-label" id="calLabel">-</p>
-                  <button class="btn btn-tertiary" id="calNext" type="button" aria-label="Volgende maand">Volgende</button>
+                <div class="guest-row">
+                  <div>
+                    <p>Kinderen</p>
+                    <span>2 tot 17 jaar</span>
+                  </div>
+                  <div class="guest-stepper">
+                    <button id="guestChildrenMinus" type="button" class="guest-stepper-btn" aria-label="Minder kinderen">-</button>
+                    <output id="guestChildrenValue" aria-live="polite">2</output>
+                    <button id="guestChildrenPlus" type="button" class="guest-stepper-btn" aria-label="Meer kinderen">+</button>
+                  </div>
+                </div>
+
+                <div class="guest-popover-footer">
+                  <p>Totaal <strong id="guestPopoverTotal">4 gasten</strong></p>
+                  <button id="closeGuests" type="button" class="btn btn-subtle">Sluit</button>
                 </div>
               </div>
 
-              <div class="calendar-core">
-                <p class="hint sr-only" id="availabilityHint">Kalenderstatus</p>
+              <div class="calendar-popover" id="calendarPopover" role="dialog" aria-modal="false" aria-label="Kies je aankomst- en vertrekdatum" tabindex="-1" hidden>
+                <div class="calendar-controls" aria-label="Kalender navigatie">
+                  <button class="btn btn-subtle" id="calPrev" type="button" aria-label="Vorige maand">Vorige</button>
+                  <p id="calLabel" class="cal-label">-</p>
+                  <button class="btn btn-subtle" id="calNext" type="button" aria-label="Volgende maand">Volgende</button>
+                </div>
 
-                <div class="calendar-shell">
-                  <div class="calendar" id="availabilityCalendar" aria-label="Kalender"></div>
+                <div id="availabilityLegend" class="availability-legend" aria-label="Kalender legenda"></div>
+
+                <div class="calendar-wrap">
+                  <div id="availabilityCalendar" class="calendar" aria-label="Beschikbaarheidskalender"></div>
                 </div>
 
                 <div class="calendar-meta">
-                  <p class="tiny">Min. <strong id="minNightsValue">4 nachten</strong> · In <strong id="checkinValue">16:00</strong> · Uit <strong id="checkoutValue">10:00</strong></p>
-                  <button class="btn btn-secondary" id="clearSelection" type="button">Wis selectie</button>
+                  <p>Min. <strong id="minNightsValue">4 nachten</strong></p>
+                  <p>Incheck <strong id="checkinValue">16:00</strong></p>
+                  <p>Uitcheck <strong id="checkoutValue">10:00</strong></p>
+                  <p>Aankomst <strong id="selectedArrival">Datum toevoegen</strong></p>
+                  <p>Vertrek <strong id="selectedDeparture">Datum toevoegen</strong></p>
+                  <button id="clearSelection" type="button" class="btn btn-subtle">Wis selectie</button>
+                  <button id="closeCalendar" type="button" class="btn btn-subtle">Sluit kalender</button>
                 </div>
               </div>
-            </article>
+            </div>
 
-            <article class="panel" id="contact">
-              <h2>Jouw verblijf</h2>
+            <div class="booking-inline-meta" aria-live="polite">
+              <p><span>Nachten</span><strong id="selectedNights">-</strong></p>
+              <p><span>Indicatie totaal</span><strong id="selectedEstimate">-</strong></p>
+              <p><span>Waarborg</span><strong id="selectedDeposit">-</strong></p>
+            </div>
 
-              <form class="request-form" id="rentalForm">
-                <div class="quick-booking" aria-live="polite">
-                  <div class="quick-dates">
-                    <p class="quick-cell">
-                      <span>Aankomst</span>
-                      <strong id="selectedArrival">Datum toevoegen</strong>
-                    </p>
-                    <p class="quick-cell">
-                      <span>Vertrek</span>
-                      <strong id="selectedDeparture">Datum toevoegen</strong>
-                    </p>
-                  </div>
+            <p class="range-status" id="rangeStatus">Kies een vrije aankomstdatum om te starten.</p>
 
-                  <label class="quick-guests">
-                    Gasten
-                    <select id="requestGuests" name="Gasten">
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4" selected>4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                    </select>
+            <input id="requestArrival" name="Aankomst" type="hidden" />
+            <input id="requestDeparture" name="Vertrek" type="hidden" />
+            <input id="requestNights" name="Nachten" type="hidden" />
+            <input id="requestEstimate" name="IndicatieTotaal" type="hidden" />
+            <input id="requestDeposit" name="Waarborg" type="hidden" />
+            <input id="periodDisplay" name="Periode" type="hidden" />
+
+            <section class="checkout" id="checkoutDetails" hidden>
+              <div class="checkout-head">
+                <h3>Laatste stap</h3>
+                <p>Vul hieronder je gegevens in om je aanvraag te versturen of de waarborg via Stripe te betalen.</p>
+              </div>
+              <div class="checkout-fields">
+                <label for="requestName">
+                  Naam
+                  <input id="requestName" name="Naam" autocomplete="name" />
+                </label>
+
+                <div class="field-row">
+                  <label for="requestEmail">
+                    E-mail
+                    <input id="requestEmail" name="Email" type="email" autocomplete="email" />
                   </label>
 
-                  <p class="quick-nights">Verblijf: <strong id="selectedNights">-</strong> nachten</p>
-
-                  <button class="btn btn-primary quick-submit" id="startCheckout" type="button">Beschikbaarheid controleren</button>
+                  <label for="requestPhone">
+                    Telefoon
+                    <input id="requestPhone" name="Telefoon" autocomplete="tel" />
+                  </label>
                 </div>
 
-                <p class="range-status sr-only" id="rangeStatus">Kies een vrije aankomstdatum om te starten.</p>
+                <label for="requestMessage">
+                  Extra vraag
+                  <textarea id="requestMessage" name="Bericht" rows="4" placeholder="Bijvoorbeeld: aankomstuur, golfplanning of verblijf met kinderen"></textarea>
+                </label>
 
-                <input id="requestArrival" name="Aankomst" type="hidden" />
-                <input id="requestDeparture" name="Vertrek" type="hidden" />
-                <input id="requestNights" name="Nachten" type="hidden" />
-                <input id="requestEstimate" name="IndicatieTotaal" type="hidden" />
-                <input id="requestDeposit" name="Waarborg" type="hidden" />
-                <input id="periodDisplay" name="Periode" type="hidden" />
+                <div class="request-actions">
+                  <a class="btn btn-primary" id="mailLink" href="mailto:hilde.dequeecker@gmail.com">Mail aanvraag</a>
+                  <a class="btn btn-ghost" id="waLink" href="https://wa.me/32497170956" target="_blank" rel="noopener">WhatsApp aanvraag</a>
+                </div>
 
-                <details class="request-checkout" id="checkoutDetails">
-                  <summary>Boeking afronden</summary>
-                  <div class="checkout-fields">
-                    <div class="form-row form-row-compact">
-                      <label>
-                        E-mail
-                        <input id="requestEmail" name="Email" type="email" autocomplete="email" />
-                      </label>
+                <button class="btn btn-subtle" id="stripeCheckout" type="button">Betaal waarborg via Stripe</button>
+                <p id="paymentStatus" class="assistive-message">Online betaling loopt via Stripe-hosted checkout.</p>
 
-                      <label>
-                        Telefoon
-                        <input id="requestPhone" name="Telefoon" autocomplete="tel" />
-                      </label>
-                    </div>
-
-                    <label>
-                      Naam
-                      <input id="requestName" name="Naam" autocomplete="name" />
-                    </label>
-
-                    <label>
-                      Extra vraag of opmerking
-                      <textarea id="requestMessage" name="Bericht" rows="3" placeholder="Bijvoorbeeld: golf, kindvriendelijke tips, check-in voorkeur..."></textarea>
-                    </label>
-
-                    <div class="request-actions">
-                      <a class="btn btn-primary" id="mailLink" href="mailto:hilde.dequeecker@gmail.com">Mail aanvraag</a>
-                      <a class="btn btn-secondary" id="waLink" href="https://wa.me/32497170956" target="_blank" rel="noopener">WhatsApp aanvraag</a>
-                    </div>
-
-                    <div class="request-actions request-actions-secondary">
-                      <button class="btn btn-tertiary" id="resetRequest" type="reset">Wis velden</button>
-                    </div>
-
-                    <p class="tiny muted" id="estimateNote">Kies je data om meteen een prijsindicatie te zien.</p>
-                    <p class="tiny muted">Extra info vragen we pas wanneer je wil bevestigen.</p>
-                  </div>
-                </details>
-              </form>
-            </article>
-          </div>
-
-          <aside class="booking-pool" aria-label="Complex zwembaden">
-            <article class="pool-card pool-card--placeholder is-missing-real-photo">
-              <img
-                src="./assets/pool-real.jpg"
-                alt="Zwembad van het Velapi Golf complex"
-                loading="lazy"
-                onload="this.closest('.pool-card').classList.remove('is-missing-real-photo')"
-                onerror="this.remove(); this.closest('.pool-card').classList.add('is-missing-real-photo')" />
-              <div class="pool-copy">
-                <p class="pool-kicker">Complexfoto</p>
-                <h3>Hier komt de echte zwembadfoto van Velapi Golf</h3>
-                <p>Voor complex, locatie en omgeving gebruiken we alleen echte beelden. Voeg de zwembadfoto toe als <code>assets/pool-real.jpg</code>, dan staat die hier automatisch live.</p>
-                <a class="btn btn-secondary" href="#complex">Bekijk het complex</a>
+                <button class="btn btn-subtle" id="resetRequest" type="reset">Wis velden</button>
+                <p id="estimateNote" class="assistive-message">Kies je data om meteen een prijsindicatie te zien.</p>
               </div>
-            </article>
-          </aside>
-        </div>
+            </section>
+          </form>
+        </article>
       </div>
     </section>
 
     <section id="tarieven" class="section" aria-label="Tarieven">
-      <div class="container tariff-layout">
-        <div class="tariff-intro">
-          <p class="eyebrow">Tarieven</p>
-          <h2>Seizoensprijzen met duidelijke indicatie</h2>
-          <p class="muted intro">Je ziet meteen een richtprijs, daarna bevestigen we alles persoonlijk en helder.</p>
-        </div>
+      <div class="shell section-head">
+        <p class="kicker">Seizoensprijzen</p>
+        <h2>Duidelijke richtprijzen per periode</h2>
+      </div>
 
-        <div class="tariff-content">
-          <div class="season-grid" id="seasonCards" aria-live="polite"></div>
-          <p class="tiny muted" id="pricingMeta">Tarieven laden...</p>
-        </div>
+      <div class="shell seasons-shell">
+        <div class="season-grid" id="seasonCards" aria-live="polite"></div>
+        <p class="season-meta" id="pricingMeta">Tarieven laden...</p>
       </div>
     </section>
 
-    <section id="appartement" class="section section-alt" aria-label="Het penthouse">
-      <div class="container split-grid">
-        <div>
-          <p class="eyebrow">Het penthouse</p>
-          <h2>Ruimte, licht en een terras waar je wil blijven zitten</h2>
+    <section id="appartement" class="section section-contrast" aria-label="Het penthouse">
+      <div class="shell narrative-grid">
+        <div class="narrative-copy">
+          <p class="kicker">Het penthouse</p>
+          <h2>Ruimte, daglicht en een terras dat echt het verschil maakt</h2>
           <p>
-            Binnen voelt het open en rustig aan, buiten heb je een royaal privé dakterras met zicht op de omgeving.
-            Ideaal voor koppels, gezinnen of een langere break aan de kust.
+            Dit is een privé appartement met drie slaapkamers en twee badkamers, opgezet voor rustig verblijven met gezin of vrienden.
+            De leefruimte is open en licht, met directe verbinding naar het ruime dakterras.
           </p>
-
-          <ul class="check-list">
-            <li>3 volwaardige slaapkamers</li>
-            <li>2 badkamers</li>
-            <li>Groot privé dakterras</li>
-            <li>Licht en open leefruimte</li>
-            <li>Lifttoegang vanuit ondergrondse garage</li>
+          <ul>
+            <li>Volwaardige leefruimte met open keuken</li>
+            <li id="sectie-slaapkamers">Drie aparte slaapkamers</li>
+            <li id="sectie-badkamers">Twee badkamers</li>
+            <li id="sectie-dakterras">Ruim prive dakterras met open uitzicht</li>
+            <li>Liftverbinding met ondergrondse parking</li>
+            <li>Residentie met gedeelde zwembaden en groene zones</li>
           </ul>
 
-          <div class="room-links" aria-label="Kamerpagina's">
-            <a class="room-link-card" id="room-master" href="./kamers/master-suite.html">
-              <p class="room-link-kicker">Kamer 1</p>
-              <h3>Master suite</h3>
-              <p>Ruim, licht en gericht op rust.</p>
-            </a>
-            <a class="room-link-card" id="room-guest" href="./kamers/guest-room.html">
-              <p class="room-link-kicker">Kamer 2</p>
-              <h3>Guest room</h3>
-              <p>Comfortabel voor koppels of vrienden.</p>
-            </a>
-            <a class="room-link-card" id="room-family" href="./kamers/family-room.html">
-              <p class="room-link-kicker">Kamer 3</p>
-              <h3>Family room</h3>
-              <p>Flexibele indeling voor gezin of extra gasten.</p>
-            </a>
-          </div>
+          <a class="btn btn-ghost" href="#availability">Bekijk beschikbaarheid</a>
         </div>
 
-        <div class="gallery" aria-label="Fotogalerij">
-          <img src="./assets/living.webp" alt="Lichte leefruimte" loading="lazy" />
-          <img src="./assets/terrace.webp" alt="Dakterras met zithoek" loading="lazy" />
-          <img src="./assets/view.webp" alt="Uitzicht vanuit het penthouse" loading="lazy" />
+        <div class="narrative-media" aria-label="Fotoreeks van het penthouse">
+          <img src="./assets/living.webp" alt="Leefruimte van het penthouse" loading="lazy" />
+          <img src="./assets/terrace.webp" alt="Prive dakterras van het penthouse" loading="lazy" />
+          <img src="./assets/view.webp" alt="Uitzicht over golf en kustlijn" loading="lazy" />
         </div>
       </div>
     </section>
 
-    <section id="complex" class="section" aria-label="Velapi Golf complex">
-      <div class="container">
-        <p class="eyebrow">Velapi Golf</p>
-        <h2>Een verzorgd domein dat rustig aanvoelt</h2>
-        <p class="muted intro">Je huurt volledig privé en geniet tegelijk van de aangename faciliteiten van het complex.</p>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Gemeenschappelijke zwembaden</h3>
-            <p>Verkoeling en ontspanning binnen het afgesloten domein.</p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Groene zones</h3>
-            <p>Verzorgde buitenruimtes die rust en openheid geven.</p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Kindvriendelijke ruimtes</h3>
-            <p>Aangename plekken op het domein voor gezinnen.</p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Ondergrondse garage</h3>
-            <p>Comfortabel parkeren met lift naar het appartement.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="ligging" class="section section-alt" aria-label="Ligging en omgeving">
-      <div class="container split-grid map-grid">
+    <section id="complex" class="section" aria-label="Complex en verblijfskader">
+      <div class="shell split-layout">
         <div>
-          <p class="eyebrow">Ligging</p>
-          <h2>Tussen golf, zee en het centrum van Los Alcazares</h2>
+          <p class="kicker">Complex</p>
+          <h2>Rustige residentie aan La Serena Golf</h2>
           <p>
-            Je zit vlak bij La Serena Golf en op korte afstand van de promenade en stranden van de Mar Menor.
-            Restaurants, winkels en dagelijkse adressen zijn eenvoudig bereikbaar.
+            De ligging combineert twee voordelen: het kalme ritme van een residentiele zone en directe aansluiting op golf, promenade en strandzone.
+            Je verblijft volledig privé, met toegang tot de gemeenschappelijke voorzieningen van het domein.
           </p>
+        </div>
 
-          <ul class="distance-list">
-            <li><strong>La Serena Golf:</strong> direct naast het complex</li>
-            <li><strong>Mar Menor:</strong> op korte afstand</li>
-            <li><strong>Los Alcazares centrum:</strong> snel bereikbaar</li>
-            <li><strong>Murcia regio:</strong> goede verbindingen voor uitstappen</li>
+        <div class="line-list" aria-label="Complexvoorzieningen">
+          <p><strong>La Serena Golf</strong><span>18 holes aan de kust, op adres Avda. Principe Felipe 30</span></p>
+          <p><strong>Gemeenschappelijke zwembaden</strong><span>voor residenten en gasten</span></p>
+          <p><strong>Ondergrondse parking</strong><span>met lifttoegang richting appartement</span></p>
+          <p><strong>Verzorgde buitenzones</strong><span>rustige, nette residentieomgeving</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ligging" class="section section-contrast" aria-label="Ligging en bereikbaarheid">
+      <div class="shell split-layout map-layout">
+        <div>
+          <p class="kicker">Ligging</p>
+          <h2>Los Alcazares, in het hart van de Mar Menor-regio</h2>
+          <p>
+            Volgens de toeristische dienst van Los Alcazares telt de kuststrook zeven kilometer strand en een promenade van ongeveer 5,5 kilometer.
+            Daardoor combineer je strand, wandelen, fietsen en horeca zonder lange verplaatsingen.
+          </p>
+          <ul class="location-list">
+            <li><strong>La Serena Golf:</strong> 18-holes baan op enkele minuten van het penthouse</li>
+            <li><strong>Paseo Maritimo:</strong> lange autovrije zeepromenade langs de stranden</li>
+            <li><strong>Mar Menor:</strong> ondiepe zoutwaterlagune met watersport en strandclubs</li>
+            <li><strong>Regio-uitstappen:</strong> Cartagena, Murcia-stad en Calblanque natuurpark</li>
           </ul>
-
-          <p class="tiny muted">Exacte route en check-in informatie krijg je na bevestiging.</p>
         </div>
 
         <div class="map-panel">
@@ -411,80 +354,85 @@
               title="La Serena Golf, Los Alcazares"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Avda.%20Principe%20Felipe%2030%2030710%20Los%20Alcazares%20Murcia%20Spain&z=15&output=embed">
+              src="https://www.google.com/maps?q=Avda.%20Principe%20Felipe%2030%2030710%20Los%20Alcazares%20Murcia%20Spain&z=14&output=embed">
             </iframe>
           </div>
-          <div class="map-actions">
-            <a class="btn btn-secondary btn-map" href="https://maps.google.com/?q=Avda.+Principe+Felipe+30+30710+Los+Alcazares+Murcia+Spain" target="_blank" rel="noopener">Open kaart in Google Maps</a>
-            <p class="tiny muted">Laadt de kaart niet meteen? Gebruik de knop hierboven voor directe navigatie.</p>
-          </div>
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=Avda.+Principe+Felipe+30+30710+Los+Alcazares+Murcia+Spain" target="_blank" rel="noopener">Open in Google Maps</a>
         </div>
       </div>
     </section>
 
     <section id="omgeving" class="section" aria-label="In de buurt">
-      <div class="container">
-        <p class="eyebrow">In de buurt</p>
-        <h2>Waarom gasten hier graag terugkomen</h2>
+      <div class="shell section-head">
+        <p class="kicker">In de buurt</p>
+        <h2>Activiteiten die gasten meestal combineren tijdens hun verblijf</h2>
+      </div>
 
-        <div class="area-grid">
-          <article class="area-card">
-            <h3>Golf</h3>
-            <p>La Serena Golf ligt op wandelafstand van het domein.</p>
-          </article>
-          <article class="area-card">
-            <h3>Zee en promenade</h3>
-            <p>Perfect voor een vroege wandeling, een fietstocht of een avond op een terras.</p>
-          </article>
-          <article class="area-card">
-            <h3>Lokale horeca</h3>
-            <p>Van eenvoudige lunch tot gezellige avondplek, alles ligt in de buurt.</p>
-          </article>
-          <article class="area-card">
-            <h3>Rust</h3>
-            <p>Een ontspannen omgeving met comfort, ruimte en een rustig ritme.</p>
-          </article>
-        </div>
+      <div class="shell rhythm-list">
+        <article>
+          <h3>Golf aan zee</h3>
+          <p>La Serena Golf ligt direct aan Los Alcazares en staat bekend om waterpartijen, bunkers en kustligging.</p>
+        </article>
+        <article>
+          <h3>Cartagena cultuurdag</h3>
+          <p>Het Teatro Romano en de historische havenzone zijn een vaste daguitstap vanuit de Mar Menor-regio.</p>
+        </article>
+        <article>
+          <h3>Calblanque natuurpark</h3>
+          <p>Beschermd kustgebied met duinen, baaien en wandelroutes tussen Cabo de Palos en Portman.</p>
+        </article>
+        <article>
+          <h3>Murcia-stad</h3>
+          <p>Historisch centrum met onder meer de kathedraal en een sterk horeca-aanbod voor lunch of avond.</p>
+        </article>
       </div>
     </section>
 
-    <section id="faq" class="section section-alt" aria-label="Veelgestelde vragen">
-      <div class="container faq-wrap">
-        <div class="faq-intro">
-          <p class="eyebrow">FAQ</p>
-          <h2>Praktische vragen</h2>
-        </div>
+    <section id="werkwijze" class="section section-contrast" aria-label="Werkwijze">
+      <div class="shell section-head">
+        <p class="kicker">Werkwijze</p>
+        <h2>Rechtstreeks, helder en zonder omwegen</h2>
+      </div>
 
-        <div class="faq-grid">
-          <details>
-            <summary>Hoe verloopt boeken?</summary>
-            <p>Je kiest je data in de kalender, laat je gegevens achter en we nemen snel persoonlijk contact op.</p>
-          </details>
-
-          <details>
-            <summary>Wat is het minimumverblijf?</summary>
-            <p>In de meeste periodes geldt een minimum van 4 nachten.</p>
-          </details>
-
-          <details>
-            <summary>Voor wie is dit verblijf geschikt?</summary>
-            <p>Voor koppels, gezinnen en golfliefhebbers die vooral rust en comfort zoeken.</p>
-          </details>
-
-          <details>
-            <summary>Is het verblijf geschikt voor feesten?</summary>
-            <p>Nee. Het appartement en complex zijn bedoeld voor rustig verblijf.</p>
-          </details>
-        </div>
+      <div class="shell process-lines">
+        <p><span>01</span><strong>Dataselectie</strong><em>Je kiest aankomst en vertrek in de kalender.</em></p>
+        <p><span>02</span><strong>Aanvraag</strong><em>Je vult optioneel je gegevens in en verstuurt via mail of WhatsApp.</em></p>
+        <p><span>03</span><strong>Bevestiging</strong><em>Je krijgt persoonlijk antwoord met finale bevestiging en praktische info.</em></p>
       </div>
     </section>
 
-    <section class="section final-cta" aria-label="Laatste oproep">
-      <div class="container final-cta-box">
+    <section id="faq" class="section" aria-label="Veelgestelde vragen">
+      <div class="shell section-head">
+        <p class="kicker">FAQ</p>
+        <h2>Praktische vragen vooraf</h2>
+      </div>
+
+      <div class="shell faq-list">
+        <details>
+          <summary>Hoe verloopt de boeking precies?</summary>
+          <p>Je kiest data in de kalender en verstuurt je aanvraag rechtstreeks. Daarna volgt persoonlijke bevestiging met alle afspraken.</p>
+        </details>
+        <details>
+          <summary>Wat is het minimumverblijf?</summary>
+          <p>Standaard geldt een minimumverblijf van vier nachten. De kalender toont meteen of je selectie daaraan voldoet.</p>
+        </details>
+        <details>
+          <summary>Voor hoeveel personen is het penthouse bedoeld?</summary>
+          <p>Het penthouse is voorzien voor maximaal zes gasten, met de beste balans voor vier tot zes personen.</p>
+        </details>
+        <details>
+          <summary>Is dit geschikt voor feesten of groepen met veel geluid?</summary>
+          <p>Nee. Het verblijf is bedoeld voor rustig gebruik, met respect voor de residentie en de buren.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section final-section" aria-label="Laatste oproep">
+      <div class="shell final-box">
         <div>
-          <p class="eyebrow">Plan je verblijf</p>
-          <h2>Kies je periode en hoor snel van ons</h2>
-          <p class="muted">Persoonlijk contact, duidelijke afspraken en een verblijf waar je echt tot rust komt.</p>
+          <p class="kicker">Plan je verblijf</p>
+          <h2>Controleer je periode en stuur je aanvraag rechtstreeks door</h2>
+          <p>Geen platformruis, wel duidelijke communicatie en snelle opvolging.</p>
         </div>
         <a class="btn btn-primary" href="#availability">Ga naar beschikbaarheid</a>
       </div>
@@ -492,24 +440,27 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="shell footer-grid">
       <div>
-        <p class="footer-title">Appartement Hilde · Privé penthouse Los Alcazares</p>
-        <p class="tiny muted">Costa Calida · Spanje</p>
+        <p class="footer-title">Ático Hilsol · Privé penthouse Los Alcázares</p>
+        <p class="footer-meta">Costa Calida, Spanje</p>
       </div>
 
-      <div class="footer-links">
-        <a href="#availability">Beschikbaarheid</a>
-        <a href="#werkwijze">Werkwijze</a>
-        <a href="#tarieven">Tarieven</a>
-        <a href="#appartement">Penthouse</a>
-        <a href="#ligging">Ligging</a>
-        <a href="#faq">FAQ</a>
-      </div>
+      <div class="footer-right">
+        <nav class="footer-links" aria-label="Footer navigatie">
+          <a href="#availability">Beschikbaarheid</a>
+          <a href="#tarieven">Tarieven</a>
+          <a href="#appartement">Penthouse</a>
+          <a href="#ligging">Ligging</a>
+          <a href="#faq">FAQ</a>
+        </nav>
 
-      <div class="footer-branding">
-        <img src="/assets/deeq-studio.svg" alt="DeeQ Studio" class="footer-logo" />
-        <p class="tiny muted">© <span id="year"></span> DeeQ Studio · DeeQ Signature</p>
+        <div class="footer-branding">
+          <a class="footer-logo-link" href="https://www.deeqstudio.com" target="_blank" rel="noopener noreferrer" aria-label="Bezoek DeeQ Studio">
+            <img src="./assets/deeq-studio.svg" alt="DeeQ Studio" class="footer-logo" />
+          </a>
+          <p class="footer-meta">© <span id="year"></span> DeeQ Studio</p>
+        </div>
       </div>
     </div>
   </footer>

@@ -1151,6 +1151,78 @@ textarea::placeholder {
   scroll-margin-top: 150px;
 }
 
+.room-directory {
+  margin-top: 0.34rem;
+  border-top: 1px solid rgba(16, 18, 22, 0.18);
+  border-bottom: 1px solid rgba(16, 18, 22, 0.18);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(247, 243, 234, 0.5));
+}
+
+.room-directory-kicker {
+  padding: 0.68rem 0.78rem 0.52rem;
+  color: #6a7786;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.room-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgba(16, 18, 22, 0.12);
+}
+
+.room-directory-link {
+  position: relative;
+  padding: 0.66rem 0.78rem 0.72rem;
+  display: grid;
+  gap: 0.14rem;
+  color: inherit;
+  text-decoration: none;
+  border-right: 1px solid rgba(16, 18, 22, 0.12);
+  border-bottom: 1px solid rgba(16, 18, 22, 0.12);
+  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.room-directory-link:nth-child(2n) {
+  border-right: 0;
+}
+
+.room-directory-link:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.room-directory-link span {
+  color: #758293;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.room-directory-link strong {
+  color: #1e2a37;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.room-directory-link::after {
+  content: ">";
+  position: absolute;
+  right: 0.74rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6f7d8c;
+  font-weight: 700;
+}
+
+.room-directory-link:hover {
+  background: rgba(255, 255, 255, 0.82);
+  border-color: rgba(31, 48, 64, 0.24);
+  transform: translateX(1px);
+}
+
 .narrative-media {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1686,6 +1758,22 @@ textarea::placeholder {
 
   .footer-right {
     grid-template-columns: 1fr;
+  }
+
+  .room-directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .room-directory-link {
+    border-right: 0;
+  }
+
+  .room-directory-link:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(16, 18, 22, 0.12);
+  }
+
+  .room-directory-link:last-child {
+    border-bottom: 0;
   }
 
   .room-rail {

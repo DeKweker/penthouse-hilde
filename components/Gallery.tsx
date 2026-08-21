@@ -23,7 +23,7 @@ export function Gallery() {
     };
   }, [index]);
 
-  const visible = showAll ? gallery : gallery.slice(0, 8);
+  const visible = showAll ? gallery : gallery.slice(0, 9);
 
   return (
     <>
@@ -31,20 +31,25 @@ export function Gallery() {
         {visible.map((photo, photoIndex) => (
           <button
             className={`gallery-tile tile-${photoIndex + 1}`}
-            key={photo.src}
+            key={`${photo.src}-${photo.label}`}
             type="button"
             onClick={() => setIndex(photoIndex)}
             aria-label={`${photo.label} vergroten`}
           >
-            <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 760px) 50vw, (max-width: 1100px) 33vw, 25vw" />
-            <span>{photo.label}</span>
+            <span className="gallery-frame">
+              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw" />
+            </span>
+            <span className="gallery-caption">
+              <span>{String(photoIndex + 1).padStart(2, "0")}</span>
+              <strong>{photo.label}</strong>
+            </span>
           </button>
         ))}
       </div>
       {!showAll && (
         <div className="gallery-more">
           <button className="text-button" type="button" onClick={() => setShowAll(true)}>
-            Bekijk alle {gallery.length} foto&apos;s
+            Open de volledige galerij · {gallery.length} foto&apos;s
           </button>
         </div>
       )}
@@ -56,7 +61,7 @@ export function Gallery() {
             <div className="lightbox-image">
               <Image src={gallery[index].src} alt={gallery[index].alt} fill sizes="96vw" priority />
             </div>
-            <figcaption><span>{String(index + 1).padStart(2, "0")} / {gallery.length}</span>{gallery[index].label}</figcaption>
+            <figcaption><span>{String(index + 1).padStart(2, "0")} / {gallery.length}</span><strong>{gallery[index].label}</strong></figcaption>
           </figure>
           <button className="lightbox-nav lightbox-next" type="button" onClick={() => setIndex((index + 1) % gallery.length)} aria-label="Volgende foto">Volgende</button>
         </div>

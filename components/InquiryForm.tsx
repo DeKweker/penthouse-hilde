@@ -70,7 +70,7 @@ export function InquiryForm() {
       `Vertrek: ${displayDate(checkOut)}`,
       `Aantal gasten: ${guests}`,
       name ? `Naam: ${name}` : "",
-      price ? `Prijsindicatie website: € ${price.toLocaleString("nl-BE")}` : "",
+      price ? `Richtprijs verblijf: € ${price.toLocaleString("nl-BE")}` : "",
       message ? `Opmerking: ${message}` : "",
       "",
       "Kan je laten weten of deze periode nog beschikbaar is?",
@@ -134,7 +134,7 @@ export function InquiryForm() {
         <button className="button button-whatsapp" type="button" onClick={openWhatsApp}>Verder via WhatsApp</button>
         <button className="button button-mail" type="button" onClick={openEmail}>Verder via e-mail</button>
       </div>
-      <p className="privacy-note">Deze site verstuurt of bewaart je gegevens niet. Je aanvraag wordt pas gedeeld wanneer jij WhatsApp of je eigen mail-app opent en zelf verzendt.</p>
+      <p className="privacy-note">Je gegevens worden hier niet opgeslagen. Pas wanneer je zelf WhatsApp of je mail-app opent en het bericht verzendt, worden ze gedeeld met Hilde.</p>
     </form>
   );
 }

@@ -2,19 +2,24 @@
 
 Next.js 16.3 static production build for the private penthouse in Velapi Golf, Los Alcázares.
 
-## Architecture
+## Production architecture
 
 - Next.js App Router + TypeScript
 - Fully static export (`output: 'export'`)
-- No database, serverless API, cron, checkout, Supabase or transactional e-mail dependency
-- No tracking or non-essential cookies
-- Booking inquiry is assembled locally in the visitor's browser and opened in WhatsApp or the visitor's own mail app
-- Local, optimized WebP property photography
-- Responsive gallery + keyboard-accessible lightbox
-- Static SEO metadata, VacationRental structured data, sitemap and robots
+- Vercel Hobby friendly: no database, serverless API, cron, checkout, Supabase or transactional e-mail dependency
+- Booking inquiry assembled locally and opened in WhatsApp or the visitor's own mail app
+- Authentic local WebP property photography
+- Editorial responsive gallery + keyboard-accessible lightbox
+- CSS view-timeline motion where supported, with reduced-motion fallback
+- Interactive 3D photo composition built exclusively from real property images
+- Static SEO metadata, VacationRental structured data, `public/sitemap.xml` and `public/robots.txt`
 - Privacy and practical conditions pages
 
-This makes the current version cheap and robust to host. A future Booking.com/Airbnb link, channel manager or real booking engine can be added later without rebuilding the visual site.
+## Visual direction
+
+The palette is derived from the property itself: warm limestone/cream, deep landscape green and a mustard-ochre accent sampled from the dining chairs. Green is reserved mainly for landscape/night sections; ochre carries the warmer interior chapters and inquiry section.
+
+The layout intentionally avoids repeating the same label/value-list component. Chapters alternate between full-bleed photography, editorial copy, spatial 3D composition, horizontal room storytelling, asymmetrical gallery layouts and landscape overlays.
 
 ## Local development
 
@@ -30,11 +35,11 @@ npm run typecheck
 npm run build
 ```
 
-The static production output is generated in `out/`.
+The static output is generated in `out/`.
 
 ## Vercel
 
-The repository can replace the existing Appartement Hilde repository. Vercel should detect Next.js automatically.
+This source can replace the content of the existing Appartement Hilde repository while keeping its `.git` folder and existing Vercel connection.
 
 Optional environment variable:
 
@@ -42,22 +47,10 @@ Optional environment variable:
 NEXT_PUBLIC_SITE_URL=https://appartement-hilde.vercel.app
 ```
 
-Set this to the final custom domain once one is connected, then redeploy so canonical, Open Graph, sitemap and structured data use that domain.
+Change the canonical domain in `public/robots.txt` and `public/sitemap.xml` when a final custom domain is connected.
 
-## Contact / booking
+## Contact and rates
 
-Contact values live in `lib/site.ts`:
-
-- e-mail
-- WhatsApp number
-- minimum stay
-- maximum guests
-- cleaning fee
-- security deposit
-- season prices
+Contact details, occupancy, fees and season prices live in `lib/site.ts`.
 
 No secrets are stored in the repository.
-
-## Photography
-
-The gallery currently contains 17 distinct, authentic property images from the supplied production source. They are re-exported without EXIF metadata and optimized for the web. The Google Photos shared album can be used to add further images later; drop new originals into the image workflow and add their entries to `gallery` in `lib/site.ts`.

@@ -126,7 +126,7 @@ export default function Home() {
         </section>
 
         <section className="golf-story section">
-          <Reveal className="golf-portrait">
+          <Reveal variant="media" className="golf-portrait">
             <div className="golf-photo parallax-image"><Image src="/images/gallery/golf-close.webp" alt="La Serena Golf naast Velapi Golf" fill sizes="(max-width: 900px) 100vw, 48vw" /></div>
           </Reveal>
           <Reveal className="golf-copy-light">

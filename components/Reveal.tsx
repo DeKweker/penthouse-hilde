@@ -2,9 +2,9 @@
 
 import { PropsWithChildren, useEffect, useRef, useState } from "react";
 
-type Props = PropsWithChildren<{ className?: string }>;
+type Props = PropsWithChildren<{ className?: string; variant?: "text" | "media" }>;
 
-export function Reveal({ children, className = "" }: Props) {
+export function Reveal({ children, className = "", variant = "text" }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -24,7 +24,7 @@ export function Reveal({ children, className = "" }: Props) {
   }, []);
 
   return (
-    <div ref={ref} className={`reveal ${visible ? "is-visible" : ""} ${className}`.trim()}>
+    <div ref={ref} className={`reveal reveal-${variant} ${visible ? "is-visible" : ""} ${className}`.trim()}>
       {children}
     </div>
   );

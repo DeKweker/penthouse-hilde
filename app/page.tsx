@@ -181,11 +181,19 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="footer section">
-        <div className="footer-brand"><strong>Casa Filou</strong><span>Velapi Golf · Los Alcázares</span></div>
-        <div className="footer-location"><p>30710 Los Alcázares<br />Región de Murcia · Spanje</p><a href={`mailto:${site.email}`}>{site.email}</a></div>
-        <nav aria-label="Voetnavigatie"><a href="#penthouse">Penthouse</a><a href="#ruimtes">Ruimtes</a><a href="#ligging">Omgeving</a><a href="#prijzen">Prijzen</a><a href="/privacy/">Privacy</a><a href="/voorwaarden/">Voorwaarden</a></nav>
-        <div className="footer-bottom"><span>© 2026 Casa Filou</span><a href="https://deeqstudio.com" target="_blank" rel="noreferrer">Ontwerp & ontwikkeling · DeeQ Studio</a><a href="#top">Naar boven</a></div>
+      <footer className="footer">
+        <div className="footer-main">
+          <div className="footer-brand"><strong>Casa Filou</strong><span>Penthouse aan La Serena Golf</span></div>
+          <div className="footer-location"><small>Vind ons</small><p>Velapi Golf<br />30710 Los Alcázares<br />Región de Murcia · Spanje</p><a href="https://www.google.com/maps/dir/?api=1&destination=37.728066%2C-0.868076" target="_blank" rel="noreferrer">Open route ↗</a></div>
+          <div className="footer-contact"><small>Rechtstreeks bij Hilde</small><a href={`mailto:${site.email}`}>{site.email}</a><a href="#aanvragen">Vraag je verblijf aan</a></div>
+          <nav aria-label="Voetnavigatie"><small>Casa Filou</small><a href="#penthouse">Het penthouse</a><a href="#ruimtes">De ruimtes</a><a href="#slapen">De kamers</a><a href="#ligging">De omgeving</a><a href="#prijzen">Prijzen</a></nav>
+        </div>
+        <div className="footer-bottom">
+          <span>© 2026 Casa Filou</span>
+          <div><a href="/privacy/">Privacy</a><a href="/voorwaarden/">Voorwaarden</a></div>
+          <a className="footer-studio" href="https://deeqstudio.com" target="_blank" rel="noreferrer"><span>Website door</span><strong>DeeQ Studio ↗</strong></a>
+          <a href="#top">Naar boven ↑</a>
+        </div>
       </footer>
 
       <a className="mobile-inquiry" href="#aanvragen"><span>Verblijf</span><b>Informeer naar data</b></a>

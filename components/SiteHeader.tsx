@@ -22,17 +22,17 @@ export function SiteHeader() {
 
   return (
     <header className={`site-header${scrolled ? " is-scrolled" : ""}${open ? " menu-is-open" : ""}`}>
-      <a className="wordmark" href="#top" aria-label="Ático Hilsol, naar boven" onClick={close}>
-        <span>Ático Hilsol</span>
+      <a className="wordmark" href="/#top" aria-label="Casa Filou, naar boven" onClick={close}>
+        <span>Casa Filou</span>
         <small>Los Alcázares</small>
       </a>
       <nav className="desktop-nav" aria-label="Hoofdnavigatie">
-        <a href="#penthouse">Penthouse</a>
-        <a href="#galerij">Foto&apos;s</a>
-        <a href="#ligging">Ligging</a>
-        <a href="#prijzen">Prijzen</a>
+        <a href="/#penthouse">Het verblijf</a>
+        <a href="/#ruimtes">Ruimtes</a>
+        <a href="/#ligging">Ligging</a>
+        <a href="/#prijzen">Prijzen</a>
       </nav>
-      <a className="header-cta" href="#aanvragen">Verblijf aanvragen</a>
+      <a className="header-cta" href="/#aanvragen">Verblijf aanvragen</a>
       <button
         className="menu-button"
         type="button"
@@ -46,7 +46,7 @@ export function SiteHeader() {
       <div className="mobile-menu" hidden={!open}>
         <nav aria-label="Mobiele navigatie">
           <a href="#penthouse" onClick={close}>Het penthouse</a>
-          <a href="#galerij" onClick={close}>Fotogalerij</a>
+          <a href="/#ruimtes" onClick={close}>Terras, dak & leefruimte</a>
           <a href="#ligging" onClick={close}>Ligging & omgeving</a>
           <a href="#prijzen" onClick={close}>Prijzen</a>
           <a href="#aanvragen" onClick={close}>Verblijf aanvragen</a>

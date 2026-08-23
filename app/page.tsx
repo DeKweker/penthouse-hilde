@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { Gallery } from "@/components/Gallery";
 import { InquiryForm } from "@/components/InquiryForm";
 import { Reveal } from "@/components/Reveal";
 import { SiteHeader } from "@/components/SiteHeader";
-import { SpatialScene } from "@/components/SpatialScene";
-import { seasons, site } from "@/lib/site";
+import { SpaceStories } from "@/components/SpaceStories";
+import { rooms, seasons, site } from "@/lib/site";
 
 const amenities = [
   "Privésolarium",
@@ -22,7 +21,7 @@ const faq = [
   ["Is de prijsindicatie definitief?", "De berekening volgt de huidige seizoenstarieven en telt de eindschoonmaak mee. De definitieve prijs wordt samen met de beschikbaarheid persoonlijk bevestigd."],
   ["Wat zijn de aankomst- en vertrektijden?", "Check-in is voorzien vanaf 16:00 en check-out uiterlijk om 10:00. Een ander tijdstip kan vooraf worden besproken."],
   ["Hoort het solarium volledig bij het penthouse?", "Ja. Het solarium ligt boven de woning en is volledig privé. Het vormt een tweede buitenruimte naast het hoekterras aan de woonverdieping."],
-  ["Is een auto nodig?", "Voor stranden, restaurants en uitstappen is een auto handig. Bij de woning hoort een ondergrondse parkeerplaats. Dagelijkse boodschappen zijn ook vlot per fiets bereikbaar."],
+  ["Hebben we een auto nodig?", "Nee. Boodschappen, strand en de boulevard zijn goed per fiets bereikbaar; fietsverhuur kan vooraf worden geregeld. Wie de kust verder wil verkennen, heeft wel het extra gemak van een auto en kan gebruikmaken van de ondergrondse parkeerplaats."],
   ["Kan ik fietsen huren?", "Fietsverhuur kan op aanvraag en volgens beschikbaarheid met de verhuurders worden besproken."],
 ];
 
@@ -35,7 +34,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "VacationRental",
     name: site.name,
-    description: "Privé penthouse met drie slaapkamers, twee badkamers, hoekterras, privésolarium en gemeenschappelijk zwembad in Velapi Golf, Los Alcázares.",
+    description: "Casa Filou is een penthouse met drie slaapkamers, twee badkamers, hoekterras, privésolarium en zwembad in Velapi Golf, Los Alcázares.",
     url: site.siteUrl,
     image: [`${site.siteUrl}/images/og-cover.webp`],
     numberOfBedrooms: 3,
@@ -59,72 +58,38 @@ export default function Home() {
         <section className="hero" id="top" aria-labelledby="hero-title">
           <picture className="hero-picture parallax-image">
             <source media="(max-width: 720px)" srcSet="/images/hero-mobile.webp" type="image/webp" />
-            <img src="/images/hero-desktop.webp" alt="Hoekterras van Ático Hilsol met zicht over Velapi Golf en het zwembad" fetchPriority="high" />
+            <img src="/images/hero-desktop.webp" alt="Hoekterras van Casa Filou met zicht over Velapi Golf en het zwembad" fetchPriority="high" />
           </picture>
           <div className="hero-shade" aria-hidden="true" />
           <div className="hero-content">
-            <p className="eyebrow light">Velapi Golf · Los Alcázares</p>
-            <h1 id="hero-title">Zon boven je.<br /><em>Ruimte rondom je.</em></h1>
-            <p>Een privé penthouse voor zes aan La Serena Golf, met een groot hoekterras aan de leefruimte en een volledig solarium op het dak.</p>
+            <p className="eyebrow light">Casa Filou · Los Alcázares</p>
+            <h1 id="hero-title">Hier duurt de dag<br /><em>net wat langer.</em></h1>
+            <p>Een licht penthouse voor zes, tussen de fairway en de Mar Menor. Met twee buitenruimtes en alle vrijheid om de auto te laten staan.</p>
             <div className="hero-actions">
               <a className="button button-light" href="#aanvragen">Informeer naar je verblijf</a>
-              <a className="underlink light" href="#galerij">Bekijk het penthouse</a>
+              <a className="underlink light" href="#ruimtes">Ontdek Casa Filou</a>
             </div>
           </div>
-          <div className="hero-signature" aria-hidden="true">ÁH</div>
+          <div className="hero-signature" aria-hidden="true">CF</div>
         </section>
 
         <section className="intro section" id="penthouse">
           <Reveal className="intro-label">
-            <p className="eyebrow">Ático Hilsol</p>
+            <p className="eyebrow">Welkom bij Casa Filou</p>
             <p className="side-note">3 slaapkamers · 2 badkamers<br />2 private buitenruimtes</p>
           </Reveal>
           <Reveal className="intro-copy">
             <h2>Van de eerste koffie buiten tot een laatste glas <em>boven op het dak.</em></h2>
             <div className="two-copy">
-              <p>De woonverdieping opent breed naar het hoekterras. Binnen blijven keuken, eettafel en zithoek in één lichte ruimte verbonden; buiten loopt het zicht verder over de residentie, het zwembad en de golfomgeving.</p>
-              <p>Een verdieping hoger ligt het privésolarium: een tweede buitenkamer met lounge, eettafel, ligruimte en buitenkeuken. Beneden slaap je rustig met drie slaapkamers en twee badkamers voor maximaal zes gasten.</p>
+              <p>De woonverdieping opent breed naar het hoekterras. Keuken, eettafel en zithoek vormen één lichte leefruimte; buiten loopt het zicht verder over de residentie, het zwembad en het groen.</p>
+              <p>Een verdieping hoger wacht het privésolarium: lounge, eettafel, ligruimte en buitenkeuken, helemaal voor jullie. Drie volwaardige slaapkamers bieden plaats aan maximaal zes gasten.</p>
             </div>
           </Reveal>
         </section>
 
-        <div className="amenity-ribbon" aria-label="Voorzieningen">
-          <div>{[...amenities, ...amenities].map((item, index) => <span key={`${item}-${index}`}>{item}</span>)}</div>
-        </div>
+        <SpaceStories />
 
-        <section className="interior-story">
-          <div className="interior-photo parallax-image">
-            <Image src="/images/gallery/dining.webp" alt="Eetruimte met okergele stoelen en open keuken" fill sizes="100vw" priority={false} />
-            <span className="photo-note">De okergele eetstoelen zetten de warme toon van het interieur.</span>
-          </div>
-          <div className="interior-copy section">
-            <Reveal>
-              <p className="eyebrow">Binnen</p>
-              <h2>Helder en rustig,<br /><em>met warmte op de juiste plekken.</em></h2>
-            </Reveal>
-            <Reveal className="interior-text">
-              <p>Wit, hout, natuursteen en zachte neutralen houden de basis licht. Het mosterd-oker van de eetstoelen geeft de leefruimte net genoeg kleur om niet koel te worden.</p>
-              <p>De keuken ligt open aan de eettafel en de woonkamer. Geen aparte kamers die het gezelschap uit elkaar trekken, wel één leefruimte die vanzelf naar het terras doorloopt.</p>
-            </Reveal>
-          </div>
-        </section>
-
-        <section className="spatial section-ochre" aria-labelledby="spatial-title">
-          <div className="section spatial-layout">
-            <Reveal className="spatial-copy">
-              <p className="eyebrow">Twee niveaus buitenleven</p>
-              <h2 id="spatial-title">Het terras beneden.<br /><em>De hemel boven.</em></h2>
-              <p>Het hoekterras hoort bij de dagelijkse leefruimte: ontbijt, schaduw, zwembadzicht. Het solarium voelt anders — hoger, stiller en volledig op zichzelf, met plaats om te koken, eten en lang buiten te blijven.</p>
-              <div className="spatial-facts" aria-label="Buitenruimtes">
-                <span><b>woonlaag</b> hoekterras aan de living</span>
-                <span><b>dakniveau</b> volledig privésolarium</span>
-              </div>
-            </Reveal>
-            <SpatialScene />
-          </div>
-        </section>
-
-        <section className="sleep section-dark">
+        <section className="sleep section-dark" id="slapen">
           <div className="section sleep-head">
             <Reveal>
               <p className="eyebrow light">Na de zon</p>
@@ -133,27 +98,11 @@ export default function Home() {
             <Reveal className="sleep-note"><p>De hoofdslaapkamer heeft een eigen ensuite. Twee extra slaapkamers delen de tweede badkamer en houden dezelfde rustige, lichte afwerking aan.</p></Reveal>
           </div>
           <div className="sleep-track" aria-label="Slaapkamers">
-            <article className="sleep-card">
-              <div className="sleep-image parallax-image"><Image src="/images/gallery/master-suite.webp" alt="Hoofdslaapkamer" fill sizes="(max-width: 720px) 82vw, 42vw" /></div>
-              <div><span>01</span><h3>Hoofdslaapkamer</h3><p>Met ensuite badkamer.</p></div>
-            </article>
-            <article className="sleep-card sleep-card-offset">
-              <div className="sleep-image parallax-image"><Image src="/images/gallery/bedroom-one.webp" alt="Tweede slaapkamer" fill sizes="(max-width: 720px) 82vw, 42vw" /></div>
-              <div><span>02</span><h3>Tweede slaapkamer</h3><p>Dubbel bed en ingebouwde kasten.</p></div>
-            </article>
-            <article className="sleep-card">
-              <div className="sleep-image parallax-image"><Image src="/images/gallery/bedroom-two.webp" alt="Derde slaapkamer" fill sizes="(max-width: 720px) 82vw, 42vw" /></div>
-              <div><span>03</span><h3>Derde slaapkamer</h3><p>Voor kinderen, vrienden of familie.</p></div>
-            </article>
+            {rooms.map((room, index) => <a href={`/kamers/${room.slug}/`} className={`sleep-card${index === 1 ? " sleep-card-offset" : ""}`} key={room.slug}>
+              <div className="sleep-image parallax-image"><Image src={room.image} alt={room.name} fill sizes="(max-width: 720px) 82vw, 42vw" /></div>
+              <div><span>{room.number}</span><h3>{room.name}</h3><p>{room.kicker} · Ontdek de kamer</p></div>
+            </a>)}
           </div>
-        </section>
-
-        <section className="gallery-section section" id="galerij" aria-labelledby="gallery-title">
-          <Reveal className="gallery-heading">
-            <p className="eyebrow">De volledige woning</p>
-            <div><h2 id="gallery-title">Kijk rustig rond.<br /><em>Van leefruimte tot avondzicht.</em></h2><p>Elke ruimte hoort bij hetzelfde verblijf: beide buitenruimtes, slaapkamers, badkamers, keuken, zwembadomgeving en golfzicht.</p></div>
-          </Reveal>
-          <Gallery />
         </section>
 
         <section className="landscape" id="ligging" aria-labelledby="location-title">
@@ -168,7 +117,7 @@ export default function Home() {
             </Reveal>
             <div className="place-cloud">
               <Reveal className="place place-golf"><span>op het domein</span><strong>La Serena Golf</strong><small>18 holes · clubhuis · restaurant</small></Reveal>
-              <Reveal className="place place-water"><span>ca. 1,5 km</span><strong>Mar Menor</strong><small>strand · boulevard · beschut water</small></Reveal>
+              <Reveal className="place place-water"><span>vlot per fiets</span><strong>Mar Menor</strong><small>strand · boulevard · beschut water</small></Reveal>
               <Reveal className="place place-city"><span>ca. 25 min</span><strong>Cartagena</strong><small>haven · oude stad · Romeins theater</small></Reveal>
               <Reveal className="place place-coast"><span>ca. 30–40 min</span><strong>Cabo de Palos & La Manga</strong><small>Middellandse Zee · snorkelen · duiken</small></Reveal>
             </div>
@@ -226,17 +175,17 @@ export default function Home() {
         </section>
 
         <section className="closing">
-          <Image src="/images/gallery/terrace-lounge.webp" alt="Terraslounge van Ático Hilsol" fill sizes="100vw" />
+          <Image src="/images/gallery/terrace-lounge.webp" alt="Terraslounge van Casa Filou" fill sizes="100vw" />
           <div className="closing-shade" />
-          <Reveal className="closing-copy"><p className="eyebrow light">Ático Hilsol · Los Alcázares</p><h2>Misschien wordt dit<br /><em>jouw plek in de zon.</em></h2><a className="button button-light" href="#aanvragen">Informeer naar je verblijf</a></Reveal>
+          <Reveal className="closing-copy"><p className="eyebrow light">Casa Filou · Los Alcázares</p><h2>Misschien wordt dit<br /><em>jouw plek in de zon.</em></h2><a className="button button-light" href="#aanvragen">Informeer naar je verblijf</a></Reveal>
         </section>
       </main>
 
       <footer className="footer section">
-        <div className="footer-brand"><strong>Ático Hilsol</strong><span>Velapi Golf · Los Alcázares</span></div>
+        <div className="footer-brand"><strong>Casa Filou</strong><span>Velapi Golf · Los Alcázares</span></div>
         <div className="footer-location"><p>30710 Los Alcázares<br />Región de Murcia · Spanje</p><a href={`mailto:${site.email}`}>{site.email}</a></div>
-        <nav aria-label="Voetnavigatie"><a href="#penthouse">Penthouse</a><a href="#galerij">Foto&apos;s</a><a href="#ligging">Omgeving</a><a href="#prijzen">Prijzen</a><a href="/privacy/">Privacy</a><a href="/voorwaarden/">Voorwaarden</a></nav>
-        <div className="footer-bottom"><span>© 2026 Ático Hilsol</span><a href="https://deeqstudio.com" target="_blank" rel="noreferrer">Ontwerp & ontwikkeling · DeeQ Studio</a><a href="#top">Naar boven</a></div>
+        <nav aria-label="Voetnavigatie"><a href="#penthouse">Penthouse</a><a href="#ruimtes">Ruimtes</a><a href="#ligging">Omgeving</a><a href="#prijzen">Prijzen</a><a href="/privacy/">Privacy</a><a href="/voorwaarden/">Voorwaarden</a></nav>
+        <div className="footer-bottom"><span>© 2026 Casa Filou</span><a href="https://deeqstudio.com" target="_blank" rel="noreferrer">Ontwerp & ontwikkeling · DeeQ Studio</a><a href="#top">Naar boven</a></div>
       </footer>
 
       <a className="mobile-inquiry" href="#aanvragen"><span>Verblijf</span><b>Informeer naar data</b></a>

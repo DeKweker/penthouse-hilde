@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Voorwaarden", description: "Praktische verblijfsvoorwaarden voor Ático Hilsol." };
+export const metadata: Metadata = { title: "Voorwaarden", description: "Praktische verblijfsvoorwaarden voor Casa Filou." };
 
 export default function TermsPage() {
   return (
     <main className="legal">
-      <Link className="legal-back" href="/">Ático Hilsol</Link>
+      <Link className="legal-back" href="/">Casa Filou</Link>
       <article>
         <p className="eyebrow">Voorwaarden</p>
         <h1>Praktische verblijfsvoorwaarden</h1>

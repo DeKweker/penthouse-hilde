@@ -65,7 +65,7 @@ export function InquiryForm() {
     return [
       "Hallo Hilde,",
       "",
-      "Ik wil graag informeren naar Ático Hilsol.",
+      "Ik wil graag informeren naar een verblijf in Casa Filou.",
       `Aankomst: ${displayDate(checkIn)}`,
       `Vertrek: ${displayDate(checkOut)}`,
       `Aantal gasten: ${guests}`,
@@ -94,7 +94,7 @@ export function InquiryForm() {
     const validation = validate();
     if (validation) return setError(validation);
     setError("");
-    const subject = `Aanvraag Ático Hilsol · ${checkIn} tot ${checkOut}`;
+    const subject = `Aanvraag Casa Filou · ${checkIn} tot ${checkOut}`;
     window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body())}`;
   }
 
